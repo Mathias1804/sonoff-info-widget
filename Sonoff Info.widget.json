@@ -1,0 +1,58 @@
+{
+    "name": "Sonoff Information",
+    "author": "Mathias Böttcher",
+    "description": "Sonoff Device Information",
+    "settings": [
+        {
+            "type": "string",
+            "label": "Top Label",
+            "id": "top_label",
+            "description": "Sonoff Device Name"
+        },
+        {
+            "type": "item",
+            "id": "uptime",
+            "label": "Uptime",
+            "description": "Laufzeit"
+        },
+        {
+            "type": "item",
+            "id": "ip_adresse",
+            "label": "IP Adresse",
+            "description": "IP Adresse"
+        },
+        {
+            "type": "item",
+            "id": "module_typ",
+            "label": "Module Typ",
+            "description": "Modul Typ"
+        },
+        {
+            "type": "item",
+            "id": "tasmota_version",
+            "label": "Tasmota Firmware",
+            "description": "Tasmota Firmware Version"
+        },
+        {
+            "type": "item",
+            "id": "voltage",
+            "label": "VCC",
+            "description": "Volt",
+            "default": ""
+        },
+        {
+            "type": "item",
+            "id": "wifi_rssi",
+            "label": "WIFI RSSI",
+            "choices": "V,A,mV",
+            "description": "WLAN"
+        },
+        {
+            "type": "item",
+            "id": "wifi_channel",
+            "label": "WIFI Channel",
+            "description": "Wlan Kanal"
+        }
+    ],
+    "template": "<style>\n.Sonoff_Information_Widget {\n  color: rgb(0, 204, 102); font-size:10px;\n}\n</style>\n\n \n<div class=\"sonoff_information_widget\">\n<div class=\"title-label\" ng-if=\"(config.top_label)\">{{config.top_label}}</div>\n\n\n\n\n  \n  \n<div class=\"row\" style=\"padding-bottom:5px;color: white;font-family: serif;\">\n<div class=\"col col-xs-9 text-left\">\n<div class=\"sonoff_information_widget\">\n<span>{{itemValue(config.uptime)}}</span>\n</div>\n \n</div>\n\n</div>\n  \n<div class=\"row\" style=\"padding-bottom:5px;color: white; font-family: serif;\">\n<div class=\"col col-xs-9 text-left\">\n<div class=\"sonoff_information_widget\">\n<span>{{itemValue(config.ip_adresse)}}</span>\n</div>\n \n</div>\n  \n</div>\n\n<div class=\"row\" style=\"padding-bottom:5px;color: white;font-family: serif;\">\n<div class=\"col col-xs-9 text-left\">\n<div class=\"sonoff_information_widget\">\n<span>{{itemValue(config.module_typ)}}</span>\n</div>\n \n</div>\n  \n</div>\n  \n<div class=\"row\" style=\"padding-bottom:5px;color: white;font-family: serif;\">\n<div class=\"col col-xs-9 text-left\">\n<div class=\"sonoff_information_widget\">\n<span>{{itemValue(config.tasmota_version)}}</span>\n</div>\n \n</div>\n  \n</div>\n  \n<div class=\"row\" style=\"padding-bottom:5px;color: white;font-family: serif;\">\n<div class=\"col col-xs-9 text-left\">\n<div class=\"sonoff_information_widget\">\n<span>{{itemValue(config.voltage)}}</span>\n</div>\n \n</div>\n  \n</div>\n  \n<div class=\"row\" style=\"padding-bottom:5px;color: white;font-family: serif;\">\n<div class=\"col col-xs-9 text-left\">\n<div class=\"sonoff_information_widget\">\n<span>{{itemValue(config.wifi_rssi)}}</span>\n</div>\n \n</div>\n  \n</div>\n  \n<div class=\"row\" style=\"padding-bottom:5px;color: white;font-family: serif;\">\n<div class=\"col col-xs-9 text-left\">\n<div class=\"sonoff_information_widget\">\n<span>{{itemValue(config.wifi_channel)}}</span>\n</div>\n \n</div>\n  \n</div>"
+}
